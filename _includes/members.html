@@ -1,0 +1,9 @@
+<div class="members">
+  {% for m in site.members %}
+  <div class="member">
+    <div class="member__portrait">Photo</div>
+    <p class="member__name">{{ m.name }}</p>
+    <p class="member__voice">{{ m.voice }}</p>
+  </div>
+  {% endfor %}
+</div>

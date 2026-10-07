@@ -1,0 +1,7 @@
+<nav class="site-nav">
+  {% assign current = page.url | relative_url %}
+  {% for item in site.nav %}
+    {% assign item_url = item.url | relative_url %}
+    <a href="{{ item_url }}"{% if current == item_url %} class="is-active" aria-current="page"{% endif %}>{{ item.title }}</a>
+  {% endfor %}
+</nav>

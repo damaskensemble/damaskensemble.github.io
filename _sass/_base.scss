@@ -1,0 +1,388 @@
+// -----------------------------------------------------------------------
+// Damask — palette & type
+// A woven, warm palette (deep damask red, aged gold, ink, parchment)
+// paired with a classical serif for headings/body and a small-caps-ish
+// sans for nav & labels, evoking the quartet's Romantic-era repertoire.
+// -----------------------------------------------------------------------
+
+:root {
+  --color-ink:        #2a1e1a;
+  --color-parchment:  #f6efe4;
+  --color-parchment-2:#efe4d2;
+  --color-damask-red: #7a2231;
+  --color-damask-red-deep: #591a24;
+  --color-gold:       #a9822f;
+  --color-gold-soft:  #c9a86a;
+  --color-line:       rgba(42, 30, 26, 0.14);
+
+  --font-serif: "Cormorant Garamond", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 42rem;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--color-parchment);
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-parchment);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-damask-red);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--color-damask-red-deep); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--color-damask-red-deep);
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-style: italic; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.08em; font-style: normal; color: var(--color-gold); }
+
+p { margin: 0 0 1.2em; }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+// -----------------------------------------------------------------------
+// Damask motif — a repeating background pattern, subtle, in the header
+// and footer, nodding to the woven-textile namesake of the ensemble.
+// -----------------------------------------------------------------------
+.damask-motif {
+  background-color: var(--color-damask-red-deep);
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.05) 0 2px, transparent 3px);
+  background-size: 48px 48px;
+}
+
+// -----------------------------------------------------------------------
+// Layout shell
+// -----------------------------------------------------------------------
+.wrap {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.site-header {
+  color: var(--color-parchment);
+  padding: 2.5rem 0 1.25rem;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  letter-spacing: 0.02em;
+  color: var(--color-parchment);
+  margin: 0;
+}
+
+.site-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-gold-soft);
+}
+
+// Nav — flat, single row, no dropdowns (sylvyanscombe-style simplicity)
+.site-nav {
+  font-family: var(--font-sans);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(246, 239, 228, 0.2);
+  width: 100%;
+}
+
+.site-nav a {
+  color: var(--color-parchment);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.85;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid transparent;
+}
+.site-nav a:hover,
+.site-nav a.is-active {
+  opacity: 1;
+  border-bottom-color: var(--color-gold-soft);
+}
+
+main {
+  padding: 3rem 0 4rem;
+}
+
+.content {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+.content--wide {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 2.5rem 0;
+}
+
+// -----------------------------------------------------------------------
+// Home hero
+// -----------------------------------------------------------------------
+.hero {
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+.hero__lede {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-ink);
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+}
+
+.hero__cta {
+  display: inline-flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7em 1.4em;
+  border: 1px solid var(--color-damask-red);
+  color: var(--color-damask-red-deep);
+  border-radius: 2px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover {
+  background: var(--color-damask-red);
+  color: var(--color-parchment);
+}
+.btn--solid {
+  background: var(--color-damask-red);
+  color: var(--color-parchment);
+}
+.btn--solid:hover {
+  background: var(--color-damask-red-deep);
+}
+
+// -----------------------------------------------------------------------
+// Members grid (bio page)
+// -----------------------------------------------------------------------
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.75rem;
+  margin: 2rem 0;
+}
+
+.member {
+  text-align: center;
+}
+
+.member__portrait {
+  aspect-ratio: 4 / 5;
+  background: var(--color-parchment-2);
+  border: 1px solid var(--color-line);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.member__portrait img { width: 100%; height: 100%; object-fit: cover; }
+
+.member__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-ink);
+}
+.member__voice {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+// -----------------------------------------------------------------------
+// Notices list (Events) — plain dated list, deliberately unfancy
+// -----------------------------------------------------------------------
+.notice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.notice-list li {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-line);
+}
+.notice-list li:last-child { border-bottom: 1px solid var(--color-line); }
+
+.notice-date {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.notice-title a {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-damask-red-deep);
+  text-decoration: none;
+}
+.notice-title a:hover { text-decoration: underline; }
+
+.notice-venue {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  opacity: 0.75;
+}
+
+// -----------------------------------------------------------------------
+// Press quotes (album page)
+// -----------------------------------------------------------------------
+blockquote.press {
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid var(--color-gold-soft);
+  font-style: italic;
+  color: var(--color-ink);
+}
+blockquote.press cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: 0.4rem;
+}
+
+// -----------------------------------------------------------------------
+// Contact form (static — see contact.md notes re: Formspree/GitHub Pages)
+// -----------------------------------------------------------------------
+form.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 32rem;
+  font-family: var(--font-sans);
+}
+form.contact-form label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 0.6em 0.75em;
+  border: 1px solid var(--color-line);
+  background: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  border-radius: 2px;
+}
+form.contact-form button {
+  justify-self: start;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.7em 1.6em;
+  background: var(--color-damask-red);
+  color: var(--color-parchment);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+form.contact-form button:hover { background: var(--color-damask-red-deep); }
+
+// -----------------------------------------------------------------------
+// Footer
+// -----------------------------------------------------------------------
+.site-footer {
+  color: var(--color-parchment);
+  padding: 2rem 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+.site-footer a { color: var(--color-gold-soft); }
+.site-footer__socials {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 40rem) {
+  body { font-size: 17px; }
+  .site-nav { gap: 0.9rem; }
+}

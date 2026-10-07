@@ -1,0 +1,313 @@
+/* =========================================================================
+   damask-live-theme.css
+   -------------------------------------------------------------------------
+   An override stylesheet matching the real damaskquartet.com layout and
+   type, based directly on a screenshot of the live site (2026-07-15):
+
+     - a compact top bar: small gray uppercase logo on the left, plain
+       nav on the right (no big centered hero title/tagline)
+     - white background, black serif body/headings, sans-serif only for
+       the nav and bold section labels like "NEWS"
+     - a pull-quote that sits quote-left / attribution-right on one row,
+       with generous whitespace above and below it
+     - plain square-cornered boxes (e.g. album art) with a thin black
+       border, no rounded corners or drop shadows anywhere
+     - no colour accent at all — it's black and white throughout
+
+   HOW TO USE:
+   Load this AFTER style.css in _layouts/default.html:
+     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+     <link rel="stylesheet" href="{{ '/assets/css/damask-live-theme.css' | relative_url }}">
+   It only redefines CSS custom properties + a handful of component
+   rules, so it layers on top of the existing site without needing any
+   HTML changes (one optional exception noted below for the pull-quote
+   markup, which already matches what's used on the home page).
+   ========================================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap");
+
+:root {
+  /* ---- palette: plain black-on-white, replacing every accent colour --- */
+  --color-ink:         #1a1a1a;   /* near-black body/heading text */
+  --color-parchment:   #ffffff;   /* pure white page background */
+  --color-parchment-2: #f4f4f4;   /* faint panel background (portraits etc.) */
+  --color-damask-red:      #1a1a1a; /* repurposed: headings/links, same as ink */
+  --color-damask-red-deep: #000000; /* pure black, hovers */
+  --color-gold:        #7a7a7a;   /* mid gray, replaces gold for labels/dates */
+  --color-gold-soft:   #b0b0b0;   /* lighter gray, hairlines */
+  --color-line:        rgba(0, 0, 0, 0.12);
+
+  /* ---- type: plain serif for reading, clean sans for nav/labels ------- */
+  --font-serif:   "PT Serif", Georgia, "Times New Roman", serif;
+  --font-display: "PT Serif", Georgia, serif;
+  --font-sans:    "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+body { background: var(--color-parchment); }
+
+/* -------------------------------------------------------------------------
+   Header: compact top bar — logo far left, nav far right, single row.
+   The real site has no big centered hero title; it's just a wordmark
+   and a nav sitting on white with a lot of open space below.
+   ------------------------------------------------------------------------- */
+.damask-motif {
+  background-color: var(--color-parchment);
+  background-image: none;
+}
+.site-header {
+  color: var(--color-ink);
+  padding: 2rem 0 4rem;   /* generous space below, matches the screenshot's
+                             tall gap between nav and the pull-quote */
+}
+.site-header__inner {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 1.5rem;
+}
+.site-title {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9a9a9a;         /* faint gray wordmark, as in the screenshot */
+}
+.site-tagline {
+  display: none;          /* not shown in the real header — kept in <title> only */
+}
+.site-nav {
+  width: auto;
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+/* Nav links: normal case (NOT uppercase), thin weight, plain black,
+   underline only on the current/active page. */
+.site-nav a {
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink);
+  opacity: 1;
+  border-bottom: none;
+  padding-bottom: 0.1rem;
+}
+.site-nav a:hover { border-bottom: 1px solid var(--color-ink); }
+.site-nav a.is-active { border-bottom: 1px solid var(--color-ink); }
+
+/* -------------------------------------------------------------------------
+   Headings & body: upright serif, black, no italics, no letter-spacing.
+   ------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-style: normal;
+  letter-spacing: 0;
+  color: var(--color-ink);
+  font-weight: 400;
+}
+h1 { font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.2rem); }
+
+/* Section labels like "NEWS" / eyebrows: bold sans, black — the one
+   place the real site breaks from serif. */
+h3, .eyebrow {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Links in body text: plain black/near-black, underlined — no accent
+   colour, thin underline matching the screenshot's understated links. */
+a {
+  color: var(--color-ink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { color: #000000; }
+
+/* Buttons: flat black outline / solid black, square corners */
+.btn {
+  border-radius: 0;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+.btn:hover { background: var(--color-ink); color: var(--color-parchment); }
+.btn--solid { background: var(--color-ink); color: var(--color-parchment); }
+.btn--solid:hover { background: #000000; }
+
+/* -------------------------------------------------------------------------
+   Editorial pull-quote — matches the screenshot precisely: quote and
+   attribution sit on the same row (quote left, "— Source" right),
+   wrapping to a stacked layout only on narrow screens. Plenty of space
+   above and below, echoing the real page's open, unhurried rhythm.
+   ------------------------------------------------------------------------- */
+blockquote.pull-quote {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  max-width: none;
+  margin: 1rem 0 4rem;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+blockquote.pull-quote p,
+blockquote.pull-quote .pull-quote__text {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  line-height: 1.4;
+  color: #3a3a3a;
+  flex: 1 1 28rem;
+}
+blockquote.pull-quote cite {
+  flex: 0 0 auto;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #4a4a4a;
+  align-self: flex-end;
+}
+blockquote.pull-quote cite::before { content: "— "; }
+
+/* Press blockquotes (used on the album page) keep the quieter left-rule
+   treatment, restyled to the same gray-on-white palette. */
+blockquote.press { border-left-color: var(--color-gold-soft); color: #4a4a4a; }
+blockquote.press cite { color: #7a7a7a; text-transform: none; letter-spacing: 0; }
+blockquote.press cite::before { content: "— "; }
+
+/* -------------------------------------------------------------------------
+   Framed image utility — the plain thin black-bordered box the real
+   site uses around the album cover. Wrap any image:
+     <div class="framed-image"><img src="..." alt=""></div>
+   ------------------------------------------------------------------------- */
+.framed-image {
+  border: 1px solid var(--color-ink);
+  padding: 0;
+  display: block;
+  max-width: 26rem;
+}
+.framed-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Member portraits: square corners, faint gray placeholder */
+.member__portrait {
+  border-radius: 0;
+  background: var(--color-parchment-2);
+  color: var(--color-gold);
+  border-color: var(--color-line);
+}
+.member__name { color: var(--color-ink); }
+.member__voice { color: var(--color-gold); }
+
+/* Notice/events list: quiet gray rule, plain black title links */
+.notice-title a { color: var(--color-ink); font-style: normal; }
+.notice-date { color: var(--color-gold); }
+.notice-venue { color: var(--color-ink); opacity: 0.65; }
+
+/* Contact form: flat corners, plain black button */
+form.contact-form label { color: var(--color-gold); }
+form.contact-form input,
+form.contact-form textarea {
+  border-radius: 0;
+  border-color: var(--color-line);
+}
+form.contact-form button { border-radius: 0; background: var(--color-ink); }
+form.contact-form button:hover { background: #000000; }
+
+/* Footer: plain white, quiet gray text, thin rule instead of a colour block */
+.site-footer {
+  color: var(--color-ink);
+  background: var(--color-parchment);
+  border-top: 1px solid var(--color-line);
+}
+.site-footer a { color: var(--color-ink); }
+
+@media (max-width: 40rem) {
+  .site-header__inner { flex-direction: column; align-items: flex-start; }
+  .site-nav { justify-content: flex-start; flex-wrap: wrap; }
+  blockquote.pull-quote cite { align-self: flex-start; }
+}
+
+/* -------------------------------------------------------------------------
+   Wider page — 80% of the viewport, capped so lines don't get absurdly
+   long on very large screens. Reading columns (.content) are widened
+   too, but kept narrower than the full wrap for comfortable reading.
+   ------------------------------------------------------------------------- */
+.wrap {
+  width: 80%;
+  max-width: 96rem;      /* cap for very large monitors */
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+.content { max-width: 52rem; }        /* was 42rem */
+.content--wide { max-width: 64rem; }  /* was 52rem */
+
+/* -------------------------------------------------------------------------
+   Two-column layout — main content + a narrower "News" column, matching
+   the real site's About/home layout. Usage:
+
+     <div class="two-col">
+       <div class="two-col__main"> ... </div>
+       <aside class="two-col__aside">
+         <h2 class="aside-heading">News</h2>
+         <div class="news-item"> ... </div>
+       </aside>
+     </div>
+
+   Stacks to a single column on narrow screens (aside moves below main).
+   ------------------------------------------------------------------------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.aside-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  margin-bottom: 1.25rem;
+}
+
+.news-item {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.news-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.news-item p { margin: 0 0 0.75em; }
+.news-item p:last-child { margin-bottom: 0; }
+
+@media (max-width: 56rem) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+

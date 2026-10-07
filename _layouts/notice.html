@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="content">
+  <span class="eyebrow">{{ page.date | date: "%-d %B %Y" }}{% if page.venue %} · {{ page.venue }}{% endif %}</span>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  <hr class="rule">
+  <p><a href="{{ '/events/' | relative_url }}">&larr; Back to all events</a></p>
+</article>

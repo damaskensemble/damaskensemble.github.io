@@ -1,0 +1,84 @@
+# Site
+title: "Damask"
+tagline: "a vocal quartet"
+description: >-
+  Damask is an international vocal quartet giving voice to the neglected
+  repertoire for four solo voices, from Schubert and Brahms to the 20th
+  and 21st centuries.
+url: "https://damaskquartet.github.io"   # change to your custom domain if you have one
+baseurl: ""                               # e.g. "/damask-quartet" for a project page; "" for a user/org page or custom domain
+lang: en
+
+# Ensemble
+founded: 2014
+members:
+  - name: "Katharine Dain"
+    voice: "Soprano"
+  - name: "Marine Fribourg"
+    voice: "Mezzo-soprano · Artistic Director"
+  - name: "Guy Cutting"
+    voice: "Tenor"
+  - name: "Drew Santini"
+    voice: "Baritone"
+
+# Nav — kept short and flat, sylvyanscombe-style: one line, no dropdowns
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about/"
+  - title: "Repertoire"
+    url: "/repertoire/"
+  - title: "Events"
+    url: "/events/"
+  - title: "Listen"
+    url: "/listen/"
+  - title: "O schöne Nacht"
+    url: "/o-schone-nacht/"
+  - title: "Contact"
+    url: "/contact/"
+  - title: "Français"
+    url: "/fr/"
+
+# Collections — "notices" plays the role sylvyanscombe's dated /backpages/
+# folder plays: small, dated, chronologically-listed items (here: concert
+# notices / news) rather than a conventional dated blog.
+collections:
+  notices:
+    output: true
+    permalink: /notices/:year-:month-:day-:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "notices"
+    values:
+      layout: "notice"
+
+# Build
+future: true   # without this, notices/events dated in the future never get
+                # built at all (they're excluded from the site, not just
+                # hidden) — needed so upcoming concerts actually have a page
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules

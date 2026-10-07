@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="content">
+  {% unless page.hide_title %}
+    <span class="eyebrow">{{ page.eyebrow }}</span>
+    <h1>{{ page.title }}</h1>
+  {% endunless %}
+  {{ content }}
+</article>
