@@ -6,7 +6,7 @@ title: Home
 <div class="hero">
   <figure class="photo">
     <img src="{{ '/assets/images/concert-2026-bow.jpg' | relative_url }}" alt="The four singers of Damask taking a bow after a concert">
-    <figcaption>In concert, June 2026. Photo: Karlis Dzjamko</figcaption>
+    <figcaption>West Cork Chamber Music Festival, Bantry, June 2026. Photo: Karlis Dzjamko</figcaption>
   </figure>
   <p class="hero__lede">
     Four voices, one woven sound — Damask performs the

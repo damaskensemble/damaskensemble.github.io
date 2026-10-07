@@ -29,7 +29,7 @@ Fribourg, the quartet's mezzo since its foundation.
 
 <figure class="photo">
   <img src="{{ '/assets/images/concert-2026-quartet.jpg' | relative_url }}" alt="Damask in concert, with percussion instruments on stage">
-  <figcaption>In concert, June 2026. Photo: Karlis Dzjamko</figcaption>
+  <figcaption><em>The Little Match Girl Passion</em>, West Cork Chamber Music Festival, Bantry, June 2026. Photo: Karlis Dzjamko</figcaption>
 </figure>
 
 {% include members.html %}

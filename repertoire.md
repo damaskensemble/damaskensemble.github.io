@@ -25,7 +25,7 @@ performs with each singer doubling on percussion.
 
 <figure class="photo">
   <img src="{{ '/assets/images/concert-2026-percussion.jpg' | relative_url }}" alt="Two singers of Damask playing percussion in concert">
-  <figcaption>June 2026. Photo: Karlis Dzjamko</figcaption>
+  <figcaption><em>The Little Match Girl Passion</em>, West Cork Chamber Music Festival, June 2026. Photo: Karlis Dzjamko</figcaption>
 </figure>
 
 ### New commissions
