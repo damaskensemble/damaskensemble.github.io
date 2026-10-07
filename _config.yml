@@ -5,7 +5,7 @@ description: >-
   Damask is an international vocal quartet giving voice to the neglected
   repertoire for four solo voices, from Schubert and Brahms to the 20th
   and 21st centuries.
-url: "https://damaskensemble.github.io"  # change to the custom domain once it points here
+url: "https://damaskquartet.com"         # custom domain (see CNAME); also served at damaskensemble.github.io
 baseurl: ""                               # e.g. "/damask-quartet" for a project page; "" for a user/org page or custom domain
 lang: en
 logo: "/assets/images/damask-logo.png"
