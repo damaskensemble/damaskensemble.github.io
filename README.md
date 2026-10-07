@@ -52,18 +52,16 @@ Then open http://localhost:4000.
    `url: https://<username>.github.io` and set `baseurl: ""` for a user
    site, or `baseurl: "/<repo-name>"` for a project site.
 
-## Things to swap in before launch
+## Adding content
 
-- **Photos** — every `.member__portrait` and video/album placeholder is
-  a plain box marked "Photo" / "placeholder". Drop real images into
-  `assets/images/` and update the relevant `<img>` tags.
-- **Contact form** — GitHub Pages can't process form submissions
-  server-side. `contact.md` is wired for
-  [Formspree](https://formspree.io) (free tier available) — sign up,
-  get your endpoint, and paste it into the form's `action=""`.
-- **Video embeds** — `listen.md` has placeholder boxes; swap in real
-  YouTube/Vimeo `<iframe>` embeds.
-- **Album purchase link** — `o-schone-nacht.md` has a "Buy the album"
-  button pointing at `#`; point it at your store/Bandcamp link.
-- **Dates in `_notices/`** — the three sample events are placeholders;
-  edit the filenames' dates and front matter for your real calendar.
+- **Events** — one file per event in `_notices/`, named
+  `YYYY-MM-DD-short-title.md`, with `title`, `date`, `venue` and
+  `excerpt` in the front matter. `/events/` lists them (upcoming and
+  past) automatically. The collection is empty for now: the draft's
+  three sample events were invented and have been removed.
+- **Member portraits** — add `photo: "/assets/images/<file>.jpg"` to a
+  member in `_config.yml`; without it only the name and voice show.
+- **Not yet on the site** (removed placeholders, to restore when real
+  material exists): a Listen page with video embeds (see git history
+  for `listen.md`), a "Buy the album" link, and a contact form (needs a
+  form backend such as Formspree, since GitHub Pages is static).

@@ -63,12 +63,5 @@ sound.
       Oerknal Ensemble, is devoted to the music of American composer Lewis
       Nielson.</p>
     </div>
-
-    <div class="news-item">
-      <p><strong>Upcoming: O schöne Nacht at the Waalse Kerk.</strong>
-      The quartet returns to Amsterdam this autumn with the complete
-      program from the album, alongside pianist Flore Merlin.
-      <a href="{{ '/events/' | relative_url }}">See all events &rarr;</a></p>
-    </div>
   </aside>
 </div>

@@ -24,8 +24,8 @@ permalink: /events/
 <p>No upcoming events are scheduled at the moment — check back soon.</p>
 {% endif %}
 
-<h2>Past</h2>
 {% if past.size > 0 %}
+<h2>Past</h2>
 <ul class="notice-list">
   {% for n in past %}
   <li>
@@ -35,8 +35,6 @@ permalink: /events/
   </li>
   {% endfor %}
 </ul>
-{% else %}
-<p>No past events yet.</p>
 {% endif %}
 
 <p>Presenting a series, festival, or house concert? We'd love to hear from

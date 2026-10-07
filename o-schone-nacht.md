@@ -44,10 +44,3 @@ Marine Fribourg, tenor Guy Cutting and baritone Drew Santini.
   “a remarkable fusion of timbres and palpable collaborative energy”
   <cite>ON Magazine</cite>
 </blockquote>
-
-<hr class="rule">
-
-<div class="hero__cta">
-  <a class="btn btn--solid" href="#">Buy the album</a>
-  <a class="btn" href="{{ '/listen/' | relative_url }}">Watch & listen</a>
-</div>
