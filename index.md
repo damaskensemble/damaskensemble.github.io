@@ -5,7 +5,7 @@ title: Home
 
 <div class="hero">
   <p class="hero__lede">
-    Four voices, five nationalities, one woven sound — Damask performs the
+    Four voices, one woven sound — Damask performs the
     rich and rarely-heard repertoire written for vocal quartet, from the
     piano-accompanied chamber works of Schubert, Schumann, Brahms and Haydn
     to newly commissioned music of the 20th and 21st centuries.
@@ -19,7 +19,7 @@ title: Home
 {% include members.html %}
 
 <blockquote class="pull-quote">
-  <span class="pull-quote__text">a remarkable fusion of timbres, and palpable collaborative energy</span>
+  <span class="pull-quote__text">a remarkable fusion of timbres and palpable collaborative energy</span>
   <cite>ON Magazine</cite>
 </blockquote>
 
@@ -48,16 +48,16 @@ sound.
     <h2 class="aside-heading">News</h2>
 
     <div class="news-item">
-      <p><strong>O schöne Nacht wins the Choc de Classica.</strong> The
-      quartet's debut recording has picked up one of the more prestigious
-      French classical-music awards, alongside a run of enthusiastic press
-      coverage. <a href="{{ '/o-schone-nacht/' | relative_url }}">Read more about the album &rarr;</a></p>
+      <p><strong>O schöne Nacht.</strong> The quartet's debut album, with
+      pianist Flore Merlin: “a perfectly executed, imaginative recital …
+      which certainly leaves us wanting (much) more” (OpusKlassiek).
+      <a href="{{ '/o-schone-nacht/' | relative_url }}">Read more about the album &rarr;</a></p>
     </div>
 
     <div class="news-item">
-      <p><strong>New commission announced.</strong> Damask will premiere a
-      new work for vocal quartet next season, continuing the ensemble's
-      ongoing commitment to expanding the repertoire for four solo voices.</p>
+      <p><strong>Canto.</strong> Damask's second album (2021), recorded with
+      Oerknal Ensemble, is devoted to the music of American composer Lewis
+      Nielson.</p>
     </div>
 
     <div class="news-item">

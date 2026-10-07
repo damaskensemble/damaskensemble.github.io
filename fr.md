@@ -28,7 +28,14 @@ Le premier disque du quatuor, *O schöne Nacht*, paru en novembre 2018, a
 été salué par la critique. Il réunit des quatuors du 19ᵉ siècle de
 Brahms, Herzogenberg et Jenner, ainsi que des pièces pour piano de
 Kirchner, enregistrés avec la pianiste française Flore Merlin sur un
-piano Streicher d'époque.
+piano Streicher d'époque, par la formation historique du quatuor :
+Katharine Dain, Marine Fribourg, le ténor Guy Cutting et le baryton Drew
+Santini. Le deuxième disque, *Canto* (2021), enregistré avec l'Oerknal
+Ensemble, est consacré au compositeur américain Lewis Nielson.
+
+Après une période difficile due à la pandémie, qui a suspendu de nombreux
+projets, l'ensemble a pris un nouvel élan en 2023 sous la direction
+artistique de Marine Fribourg, mezzo du quatuor depuis sa fondation.
 
 ## Le nom
 

@@ -20,7 +20,9 @@ program.
 
 The recording features pianist **Flore Merlin** on a period J. B.
 Streicher instrument original to the 1860s, and was produced by
-award-winning producer Frerik de Jong of 7 Mountain Records.
+award-winning producer Frerik de Jong of 7 Mountain Records. It features
+the quartet's original line-up: soprano Katharine Dain, mezzo-soprano
+Marine Fribourg, tenor Guy Cutting and baritone Drew Santini.
 
 <div style="aspect-ratio:1/1;max-width:22rem;margin:2rem auto;background:var(--color-parchment-2);border:1px solid var(--color-line);display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-gold);">
   Album artwork placeholder
@@ -29,18 +31,13 @@ award-winning producer Frerik de Jong of 7 Mountain Records.
 ## Press
 
 <blockquote class="press">
-  Praised as a beautifully judged, imaginative recital that leaves listeners wanting more.
+  “a perfectly executed, imaginative recital … which certainly leaves us wanting (much) more”
   <cite>OpusKlassiek</cite>
 </blockquote>
 
 <blockquote class="press">
-  Noted for its remarkable blend of timbres and its palpable collaborative energy.
+  “a remarkable fusion of timbres and palpable collaborative energy”
   <cite>ON Magazine</cite>
-</blockquote>
-
-<blockquote class="press">
-  A record where each singer contributes a strong solo voice, yet none dominates — balanced, harmonious, and adventurously programmed.
-  <cite>Dutch-language review</cite>
 </blockquote>
 
 <hr class="rule">
