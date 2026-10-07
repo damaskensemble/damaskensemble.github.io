@@ -27,6 +27,11 @@ projects — including a debut at London's Wigmore Hall scheduled for 2021 —
 the ensemble took off again in 2023 under the artistic direction of Marine
 Fribourg, the quartet's mezzo since its foundation.
 
+<figure class="photo">
+  <img src="{{ '/assets/images/concert-2026-quartet.jpg' | relative_url }}" alt="Damask in concert, with percussion instruments on stage">
+  <figcaption>In concert, June 2026. Photo: Karlis Dzjamko</figcaption>
+</figure>
+
 {% include members.html %}
 
 ## Recordings

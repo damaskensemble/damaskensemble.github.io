@@ -1,7 +1,7 @@
 <div class="members">
   {% for m in site.members %}
   <div class="member">
-    <div class="member__portrait">Photo</div>
+    {% if m.photo %}<div class="member__portrait"><img src="{{ m.photo | relative_url }}" alt="{{ m.name }}"></div>{% endif %}
     <p class="member__name">{{ m.name }}</p>
     <p class="member__voice">{{ m.voice }}</p>
   </div>

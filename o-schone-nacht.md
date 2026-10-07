@@ -24,9 +24,14 @@ award-winning producer Frerik de Jong of 7 Mountain Records. It features
 the quartet's original line-up: soprano Katharine Dain, mezzo-soprano
 Marine Fribourg, tenor Guy Cutting and baritone Drew Santini.
 
-<div style="aspect-ratio:1/1;max-width:22rem;margin:2rem auto;background:var(--color-parchment-2);border:1px solid var(--color-line);display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-gold);">
-  Album artwork placeholder
+<div class="framed-image" style="max-width:22rem;margin:2rem auto;">
+  <img src="{{ '/assets/images/o-schone-nacht-cover.jpg' | relative_url }}" alt="Cover of the album O schöne Nacht: Damask Vocal Quartet, Flore Merlin piano">
 </div>
+
+<figure class="photo">
+  <img src="{{ '/assets/images/damask-flore-merlin-2018.jpg' | relative_url }}" alt="Damask with pianist Flore Merlin, outdoors">
+  <figcaption>Damask with Flore Merlin, 2018</figcaption>
+</figure>
 
 ## Press
 

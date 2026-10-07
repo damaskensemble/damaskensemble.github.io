@@ -78,6 +78,11 @@ body { background: var(--color-parchment); }
 .site-tagline {
   display: none;          /* not shown in the real header — kept in <title> only */
 }
+.site-logo {
+  display: block;
+  height: 4.5rem;         /* teal logo (wordmark + "vocal quartet") */
+  width: auto;
+}
 .site-nav {
   width: auto;
   border-top: none;
@@ -203,6 +208,24 @@ blockquote.press cite::before { content: "— "; }
   width: 100%;
   height: auto;
 }
+
+/* Photos with a credit line underneath:
+     <figure class="photo"><img src="..." alt="..."><figcaption>...</figcaption></figure> */
+figure.photo {
+  margin: 2.5rem 0;
+}
+figure.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+figure.photo figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-gold);
+}
+.hero figure.photo { margin-top: 0; }
 
 /* Member portraits: square corners, faint gray placeholder */
 .member__portrait {

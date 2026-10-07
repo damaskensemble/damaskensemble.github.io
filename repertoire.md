@@ -23,6 +23,11 @@ centuries, including music by Milhaud, Messiaen, Stravinsky, Schönberg,
 Ned Rorem, and David Lang — whose *Little Match Girl Passion* the quartet
 performs with each singer doubling on percussion.
 
+<figure class="photo">
+  <img src="{{ '/assets/images/concert-2026-percussion.jpg' | relative_url }}" alt="Two singers of Damask playing percussion in concert">
+  <figcaption>June 2026. Photo: Karlis Dzjamko</figcaption>
+</figure>
+
 ### New commissions
 
 Damask actively commissions new work for vocal quartet, having premiered

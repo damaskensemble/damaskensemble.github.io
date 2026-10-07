@@ -4,6 +4,10 @@ title: Home
 ---
 
 <div class="hero">
+  <figure class="photo">
+    <img src="{{ '/assets/images/concert-2026-bow.jpg' | relative_url }}" alt="The four singers of Damask taking a bow after a concert">
+    <figcaption>In concert, June 2026. Photo: Karlis Dzjamko</figcaption>
+  </figure>
   <p class="hero__lede">
     Four voices, one woven sound — Damask performs the
     rich and rarely-heard repertoire written for vocal quartet, from the
@@ -26,7 +30,7 @@ title: Home
 <hr class="rule">
 
 <div class="two-col">
-  <div class="two-col__main">
+  <div class="two-col__main" markdown="1">
 
 ## Since 2014
 

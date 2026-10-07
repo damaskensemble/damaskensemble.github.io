@@ -8,6 +8,7 @@ description: >-
 url: "https://damaskquartet.github.io"   # change to your custom domain if you have one
 baseurl: ""                               # e.g. "/damask-quartet" for a project page; "" for a user/org page or custom domain
 lang: en
+logo: "/assets/images/damask-logo.png"
 
 # Ensemble
 founded: 2014
@@ -54,6 +55,7 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      image: "/assets/images/concert-2026-bow.jpg"   # default image for social-media previews
   - scope:
       path: ""
       type: "notices"
