@@ -242,6 +242,14 @@ figure.photo figcaption {
 .notice-date { color: var(--color-gold); }
 .notice-venue { color: var(--color-ink); opacity: 0.65; }
 
+/* Plain list with a dash before each item (e.g. ANBI documents on Contact) */
+ul.dash-list {
+  list-style: none;
+  padding-left: 0;
+  margin: -1.2em 0 1.2em;   /* cancels the paragraph's 1.2em bottom margin, so the list follows the line above directly */
+}
+ul.dash-list li::before { content: "– "; }
+
 /* Contact form: flat corners, plain black button */
 form.contact-form label { color: var(--color-gold); }
 form.contact-form input,
