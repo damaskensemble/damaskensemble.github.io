@@ -14,7 +14,7 @@ requests, please email us.
 <p>
   <strong>Email:</strong> <a href="mailto:info@damaskquartet.com">info@damaskquartet.com</a><br>
   <strong>Based in:</strong> The Hague, the Netherlands<br>
-  <strong>ANBI status:</strong>
+  <strong>ANBI status Stichting Damask Ensemble</strong>
 </p>
 <ul class="dash-list">
   <li><a href="{{ '/assets/docs/Jaarcijfers_Stichting_Damask_Ensemble_2023-2025.pdf' | relative_url }}">Jaarcijfers Stichting Damask Ensemble 2023–2025</a> (PDF)</li>
