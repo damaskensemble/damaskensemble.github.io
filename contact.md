@@ -18,6 +18,8 @@ requests, please email us.
 </p>
 <ul class="dash-list">
   <li><a href="{{ '/assets/docs/Gegevens_Stichting_Damask_Ensemble.pdf' | relative_url }}">Gegevens Stichting Damask Ensemble</a> (PDF)</li>
+  <li><a href="{{ '/assets/docs/Jaarcijfers_Stichting_Damask_Ensemble_2023-2025.pdf' | relative_url }}">Jaarcijfers Stichting Damask Ensemble 2023–2025</a> (PDF)</li>
+  <li><a href="{{ '/assets/docs/Uitgeoefende_activiteiten_Damask_Vocal_Quartet_2018-2025.pdf' | relative_url }}">Uitgeoefende activiteiten 2018–2025</a> (PDF)</li>
 </ul>
 
 <p>
